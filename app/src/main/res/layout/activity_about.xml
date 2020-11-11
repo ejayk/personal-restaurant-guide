@@ -94,13 +94,13 @@
         android:id="@+id/studentNameVivek"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" Name: Vivek Mohan Mathimakki"
+        android:text="Name: Vivek Mohan Mathimakki"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.421" />
+        app:layout_constraintVertical_bias="0.408" />
 
     <TextView
         android:id="@+id/studentIdVivek"
@@ -109,8 +109,8 @@
         android:text="Id: 101078278"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.421" />
+        app:layout_constraintVertical_bias="0.408" />
 </androidx.constraintlayout.widget.ConstraintLayout>
