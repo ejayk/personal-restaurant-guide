@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightGreen">#9EFF9A</color>
     <color name="orange">#FFA500</color>
+    <color name="gold">#FFD700</color>
+    <color name="pink">#FFC0CB</color>
 </resources>
