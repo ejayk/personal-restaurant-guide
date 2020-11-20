@@ -7,4 +7,9 @@
     <string name="phone">Phone:</string>
     <string name="rating">Rating:</string>
     <string name="tags">Tags:</string>
+    <string name="get_directions">Get Directions</string>
+    <string name="get_location">Get Location</string>
+    <string name="facebook_application_button">facebook application button</string>
+    <string name="twitter_application_button">twitter application button</string>
+    <string name="mail_application_button">mail application button</string>
 </resources>
