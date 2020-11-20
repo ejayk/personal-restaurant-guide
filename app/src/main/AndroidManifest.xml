@@ -1,33 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ca.gbc.comp3074.personalrestaurantguide">
+    package="com.example.restdashboard">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Personal Restaurant Guide"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PersonalRestaurantGuide">
-        <activity android:name=".EditRestaurantActivity"></activity>
-        <activity
-            android:name=".SplashScreenActivity"
-            android:theme="@style/SplashTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".AddRestaurantActivity"
-            android:label="Add Restaurant"
-            android:parentActivityName=".RestaurantsActivity" />
-        <activity
-            android:name=".AboutActivity"
-            android:label="About"
-            android:parentActivityName=".RestaurantsActivity" /> <!-- Setting 'restaurants' as parent screen to enable back button functionality -->
-        <activity android:name=".RestaurantsActivity">
+        android:theme="@style/Theme.RestDashboard">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

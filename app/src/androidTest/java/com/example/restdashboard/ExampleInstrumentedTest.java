@@ -1,4 +1,4 @@
-package ca.gbc.comp3074.personalrestaurantguide;
+package com.example.restdashboard;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("ca.gbc.comp3074.personalrestaurantguide", appContext.getPackageName());
+        assertEquals("com.example.restdashboard", appContext.getPackageName());
     }
 }

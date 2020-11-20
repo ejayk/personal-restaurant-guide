@@ -1,4 +1,4 @@
-package ca.gbc.comp3074.personalrestaurantguide;
+package com.example.restdashboard;
 
 import org.junit.Test;
 
