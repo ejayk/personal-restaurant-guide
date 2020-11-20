@@ -106,8 +106,6 @@ public class AddRestaurantActivity extends AppCompatActivity {
                 if(canadianTag.isChecked()){
                     tags=tags+","+canadianTag.getText();
                 }
-                //outputting the checked tags
-                setTitle("Tags: "+tags);
 
                 FileOutputStream fileOutputStream=null;
                 try{

@@ -1,43 +1,21 @@
 package ca.gbc.comp3074.personalrestaurantguide;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.CheckBox;
-import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class EditRestaurantActivity extends AppCompatActivity {
-
-    private TextView editScreenTitle;
-    private TextView editNameLabel;
-    private TextView editAddressLabel;
-    private TextView editPhoneLabel;
-    private TextView editDescriptionLabel;
-    private TextView editRatingLabel;
-    private TextView editTagsLabel;
-    private CheckBox editCanadianTag;
-    private CheckBox editItalianTag;
-    private CheckBox editGreekTag;
-    private CheckBox editJapaneseTag;
-    private CheckBox editChineseTag;
-    private CheckBox editIndianTag;
-
-
+public class RestaurantDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_restaurant);
-
-        editScreenTitle=(TextView)findViewById(R.id.editScreenTitle);
+        setContentView(R.layout.activity_details_restaurant);
 
         //back arrow button
-        if (getSupportActionBar() != null) {
+        if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
