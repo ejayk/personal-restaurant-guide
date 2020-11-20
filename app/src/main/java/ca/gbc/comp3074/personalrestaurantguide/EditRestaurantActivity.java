@@ -35,11 +35,6 @@ public class EditRestaurantActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_restaurant);
 
         editScreenTitle=(TextView)findViewById(R.id.editScreenTitle);
-
-        //back arrow button
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
     }
 
     @Override
