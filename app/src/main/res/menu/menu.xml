@@ -6,4 +6,6 @@
         android:title="About"/>
     <item android:id="@+id/restaurants"
         android:title="Restaurants"/>
+    <item android:id="@+id/restaurantDetails"
+        android:title="@string/restaurant_details"/>
 </menu>
