@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -29,6 +30,7 @@ public class RestaurantsActivity extends AppCompatActivity {
     private TextView getRestaurantName;
     private TextView getTags;
     private ListView restaurantsList;
+    private Button editBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +39,19 @@ public class RestaurantsActivity extends AppCompatActivity {
 
         restaurantsTitle=(TextView)findViewById(R.id.restaurantsTitle);
         restaurantsList=(ListView)findViewById(R.id.restaurantsList);
+        editBtn=(Button)findViewById(R.id.editBtn);
+        editBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openEditRestaurantActivity();
+            }
+        });
+
+
 
         //List<String[]>entries=new ArrayList<String[]>();
-      /* String[]entriesall = new String[];
 
+/*
         try(BufferedReader br=new BufferedReader(new FileReader("Restaurant-Data.txt"))){
             String line;
             while((line=br.readLine())!=null) {
@@ -55,12 +66,13 @@ public class RestaurantsActivity extends AppCompatActivity {
 */
 
 
-           /* try{
+        String[]entries;
+           try{
                 FileInputStream fileInputStream= openFileInput("Restaurant-Data.txt");
-                String line;
                 int read=-1;
                 StringBuffer buffer=new StringBuffer();
                 while((read=fileInputStream.read())!=-1){
+                    String[]line;
                     buffer.append((char)read);
 
                 }
@@ -71,13 +83,12 @@ public class RestaurantsActivity extends AppCompatActivity {
                 String description=buffer.substring(buffer.indexOf(",")+3);
                 String rating=buffer.substring(buffer.indexOf(",")+4);
                 String tags=buffer.substring(buffer.indexOf(",")+5);
-                entries= new String[]{name, address,}
 
 
             }catch(Exception e){
                 e.printStackTrace();
             }
-            */
+
 
         /*
         ArrayAdapter adapter=new ArrayAdapter<String>(this,R.layout.activity_main,entries);
@@ -122,6 +133,11 @@ public class RestaurantsActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
         return true;
+    }
+
+    public void openEditRestaurantActivity(){
+        Intent intent=new Intent(this,EditRestaurantActivity.class);
+        startActivity(intent);
     }
 
 
