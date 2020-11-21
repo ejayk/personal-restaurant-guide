@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PersonalRestaurantGuide">
+        <activity android:name=".AddrestroActivity"></activity>
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/SplashTheme">

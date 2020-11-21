@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Personal Restaurant Guide</string>
+    <string name="country_prompt">Choose a country</string>
+
+    <string-array name="country_arrays">
+        <item>Malaysian</item>
+        <item>Sushi</item>
+        <item>Indonesia</item>
+        <item>Italian</item>
+        <item>Mediterian</item>
+        <item>Bengali</item>
+        <item>Indian</item>
+    </string-array>
 </resources>
