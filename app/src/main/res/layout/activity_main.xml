@@ -20,43 +20,49 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.036" />
 
-    <ListView
-        android:id="@+id/restaurantsList"
-        android:layout_width="159dp"
-        android:layout_height="401dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.029"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/restaurantsTitle">
-
-    </ListView>
-
-    <Button
-        android:id="@+id/editBtn"
+    <EditText
+        android:id="@+id/ids"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edit"
-        app:backgroundTint="@color/pink"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.591"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.163" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/deleteBtn"
+        android:id="@+id/Update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="@+id/restaurantsListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/delete"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Delete"
-        app:backgroundTint="@color/pink"
+        app:layout_constraintBottom_toBottomOf="@+id/restaurantsListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/restaurantsListView"
+        android:layout_width="417dp"
+        android:layout_height="607dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.922"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.162" />
+        app:layout_constraintTop_toTopOf="@+id/restaurantsTitle"
+        app:layout_constraintVertical_bias="0.68">
+
+    </ListView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
