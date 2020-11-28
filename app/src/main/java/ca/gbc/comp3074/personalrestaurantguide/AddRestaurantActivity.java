@@ -2,26 +2,18 @@ package ca.gbc.comp3074.personalrestaurantguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Spinner;
 import android.widget.Toast;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 public class AddRestaurantActivity extends AppCompatActivity {
 
@@ -42,7 +34,8 @@ public class AddRestaurantActivity extends AppCompatActivity {
     private CheckBox italianTag;
     private CheckBox canadianTag;
     private Button addButton;
-    DatabaseHelper ourdb;
+    private SqliteDatabase mDatabase;
+    //SqliteDatabase ourdb;
 
 
     @Override
@@ -67,7 +60,8 @@ public class AddRestaurantActivity extends AppCompatActivity {
         italianTag = (CheckBox) findViewById(R.id.italianTag);
         canadianTag = (CheckBox) findViewById(R.id.canadianTag);
         addButton = (Button) findViewById(R.id.addButton);
-        ourdb = new DatabaseHelper(this);
+        mDatabase=new SqliteDatabase(this);
+        //ourdb = new SqliteDatabase(this);
         insertdata();
 
 
@@ -81,8 +75,12 @@ public class AddRestaurantActivity extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int numStars = ratingBar.getNumStars();
-                String rating = Integer.toString(numStars);
+                String name=nameInput.getText().toString();
+                String address=addressInput.getText().toString();
+                String phone=phoneInput.getText().toString();
+                String description=descriptionInput.getText().toString();
+                float numStars = ratingBar.getRating();
+                String rating = Float.toString(numStars);
                 String tags = "";
                 if (indianTag.isChecked()) {
                     tags = tags + "," + indianTag.getText();
@@ -103,14 +101,11 @@ public class AddRestaurantActivity extends AppCompatActivity {
                     tags = tags + "," + canadianTag.getText();
                 }
 
-                Boolean inserted = ourdb.insertData(nameInput.getText().toString(), addressInput.getText().toString(),
-                        phoneInput.getText().toString(), descriptionInput.getText().toString(), rating, tags);
-                if (inserted) {
-                    Toast.makeText(AddRestaurantActivity.this, "Entry added", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(AddRestaurantActivity.this, "Error adding entry", Toast.LENGTH_SHORT).show();
+                Entries newEntry=new Entries(name,address,phone,description,rating,tags);
+                mDatabase.addEntries(newEntry);
 
-                }
+                Intent intent=new Intent(AddRestaurantActivity.this,RestaurantsActivity.class);
+                startActivity(intent);
             }
         });
     }

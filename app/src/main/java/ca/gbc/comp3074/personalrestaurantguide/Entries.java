@@ -1,8 +1,6 @@
-/*package ca.gbc.comp3074.personalrestaurantguide;
+package ca.gbc.comp3074.personalrestaurantguide;
 
-import java.io.StringReader;
-
-public class Entry {
+public class Entries {
 
     private int id;
     private String name;
@@ -12,9 +10,7 @@ public class Entry {
     private String rating;
     private String tags;
 
-    public Entry(){}
-
-    public Entry(String name,String address,String phone, String description, String rating, String tags){
+    public Entries(String name,String address,String phone, String description, String rating, String tags){
         this.name=name;
         this.address=address;
         this.phone=phone;
@@ -23,7 +19,7 @@ public class Entry {
         this.tags=tags;
     }
 
-    public Entry(int  id, String name, String address, String phone, String description, String rating, String tags ){
+    public Entries(int id,String name,String address,String phone, String description, String rating, String tags){
         this.id=id;
         this.name=name;
         this.address=address;
@@ -33,12 +29,12 @@ public class Entry {
         this.tags=tags;
     }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
 
-    public void setId(int id){
-        this.id=id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -88,5 +84,10 @@ public class Entry {
     public void setTags(String tags) {
         this.tags = tags;
     }
+
+
+    /*
+    public Entries get(int position) {
+        return position;
+    }*/
 }
-*/

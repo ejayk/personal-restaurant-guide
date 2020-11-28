@@ -11,7 +11,7 @@ public class RestaurantListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_restaurant_list);
+        setContentView(R.layout.entry_list_layout);
     }
 
     public void editBtnHandler(View v){
@@ -19,4 +19,8 @@ public class RestaurantListActivity extends AppCompatActivity {
         LinearLayout viewRow=(LinearLayout)v.getParent();
 
     }
+
+
+
+
 }
